@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
+
+    *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+    }
+    img{
+      max-width: 100%;
+    }
+    ul{list-style-type: none;}
+    p{font-weight: 400;}
+    body{
+      font-family: outfit -sanserif;
+      font-size: 10px;
+      background-color: hsl(217, 54%, 11%) ;
+      color: white;
+      padding: 1rem;
+    }
+  
+    .main .top{
+      position: relative;
+
+    }
+     .main .top div{
+       position: absolute;
+       top: 0;
+       background-color:  hsl(216, 50%, 16%);
+       width: 100%;
+       height: calc(100% -3px);
+       z-index: 999;
+       opacity: 0;
+       transition: opacity 0.5 ease-in-out;
+     }
+     .main .top div:hover{
+       opacity: 1;
+       cursor: pointer;
+     }
+
+     .main .top div img{
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%, 50%);
+     }
+     .main h1{
+       color: white;
+       margin: 1rem 0.5rem ,0.5rem 0;
+
+     }
+     .main h1:hover{color: lightblue; cursor: pointer;}
+     .main ul{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 2rem 0;
+       border-bottom: 0.5px solid darkslateblue;
+
+     }
+     .main ul li{display: flex; align-items: center;}
+  .main ul li :first-child{color: lightblue;}
+  .main ul li img{ margin-right: 0.5rem;}
+
+  .main .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 2rem;
+
+  }
+
+  .main .bottom img{
+    width: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  .main .bottom p {
+    color: white;
+    font-weight: 400;
+  }
+
+ .main .bottom p:hover{
+   color: lightblue; cursor: pointer;
+ }
+
+ @media(min-width:400px){
+
+  .main{
+    width: 350px;
+    margin: 0 auto 1rem;
+  }
+
+ }
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+
+  <div class="main">
+
+
+      <div class="top">
+       <img src="images/image-equilibrium.jpg" alt="">
+         <div> <img src="images/icon-view.svg" alt=""></div>
+
+      </div>
+
+      <div class="middle">
+        <h1> Equilibrium #3429</h1>
+        <p> Our Equilibrium collection promotes balance and calm.</p>
+        <ul>
+          <li><img src="images/icon-ethereum.svg" alt=""> 0.041 ETH</li>
+          <li><img src="images/icon-clock.svg" alt=""> 3 days left</li>
+        </ul>
+        
+      </div>
+
+      <div class="bottom">
+
+        <img src="images/image-avatar.png" alt="">
+       <p> Creation of Jules Wyvern</p> 
+      </div>
+
+
+
+  </div>
+
+ 
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
